@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moshee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(images/wallpaper4.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .search-container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .google-logo {
+            width: 272px;
+            height: 92px;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .search-input {
+            flex: 1;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            padding: 15px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .search-btn, .ai-btn {
+            background-color: #f8f9fa;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: pointer;
+            height: 50px;
+        }
+
+        .mic-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            z-index: 99999;
+        }
+
+        .underlined-text {
+            text-decoration: underline;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .news-cards {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .news-card {
+            min-width: 200px;
+            width: 300px;
+            max-height: 500px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-card img {
+            max-width: 100%;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .ai-btn{
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="search-container">
+    <h1 style="font-size: 80px; color: #fff;font-family: Verdana, Geneva, Tahoma, sans-serif;">Moshee</h1>
+    <form action="https://www.google.com/search" method="GET" target="_blank" class="search-box">
+        <input type="text" name="q" class="search-input" placeholder="Search Moshee with AI...">
+        <button type="submit" class="search-btn">Search</button>
+        <button type="submit" class="ai-btn"><img src="images/obra_ai-removebg-preview.png" alt="" style="width: 25px; height: 100%;"></button>
+    </form>
+
+    <div class="underlined-text">Explore More with Moshee AI</div>
+
+    <div class="news-cards">
+        <div class="news-card">
+            <img src="images/hammerhead.jpg" alt="News Image">
+            <h3>Top 25 billionaires lose $300bn in '23</h3>
+            <p>Explore how and why the financial world was affected during the Quiet Dying </p>
+        </div>
+        <div class="news-card">
+            <img src="images/cinema.jpg" alt="News Image">
+            <h3>Global cinema is getting more and more diverse</h3>
+            <p>With two very different movies kicking off this year, the film industry seems to have more and more diversity </p>
+        </div>
+        <div class="news-card">
+            <img src="images/mike.jpg" alt="News Image">
+            <h3>Mike's comments on MSR concerning for film - film analysts </h3>
+            <p>What may be a simple expression over the film's uncertain plot, could spell diseaster for MSR</p>
+        </div>
+
+        <div class="news-card">
+            <img src="images/anim2.jpg" alt="News Image">
+            <h3>How CGI is revolutionizing media </h3>
+            <p>See all the ways in which 3D animation is running the show, from films to gaming</p>
+        </div>
+
+        <div class="news-card">
+            <img src="images/vinepolis render.jpg" alt="News Image">
+            <h3>Opinion : Vinepolis and Aquarius are dumb </h3>
+            <p>Does the world really need Zootopian cities built by dictators?</p>
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

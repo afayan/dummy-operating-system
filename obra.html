@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Obra</title>
+    <link rel="stylesheet" href="obra.css">
+</head>
+<body>
+    <!-- Your webpage content goes here -->
+    
+    
+    
+
+    <div class="taskbar">
+        <button class="taskbutton" title="start" onclick="clickingStart()"><img style = "width: 60px; background-color:none; padding: 0px;margin: 0px;"src="images/obra_logo-removebg-preview.png" alt=""></button>
+        <button class="taskbutton" title="page" onclick="clickingPage()">Page</button>
+        <button class="taskbutton" title="media" onclick="clickingMedia()">Media</button>
+        <button class="taskbutton" title="menu" onclick="clickingMenu()">Menu</button>
+        <input type="text" placeholder="Search Moshee with AI" class="search">
+        <a href="demo.html" style=" width: 80px; /* Set the desired width */
+        height: auto; /* Set the desired height */
+        overflow: hidden;" >
+            <img src="images/moshee-removebg-preview (1).png" alt="" style="width: 70%;
+            height: auto;
+            margin-left: -50px; /* Adjust this value to crop from the left */
+            margin-right: 0px;
+            margin-top: 4px
+            ;
+             ">
+        </a>
+        <div style="flex: 1; background-color:none; z-index: 80;"></div>
+        
+        <div class="icons">
+            <p style="width:auto;top: 7px; margin: 3px; padding: 10px;color: black; font-family: Arial, Helvetica, sans-serif; padding-right: 20px;" class="continent">ENG</p>
+            <img src="images/wi-fi-2119225_1280.webp" alt="" class="smallIcons" style="padding: 12px;">
+            <img src="images/Speaker_Icon.svg.png" alt="" class="smallIcons">
+            <img src="images/notification bell.png" alt="" class="smallIcons">
+            <img src="images/battery.png" alt="" class="smallIcons">
+            <p style="width:auto;top: 7px; margin: 0px; padding: 10px;color: black; font-family: Arial, Helvetica, sans-serif; padding-right: 20px;">11:40</p>
+            
+        </div>
+    </div>
+
+    <div class="profileSettings">
+        <h2 style="font-family: Arial, Helvetica, sans-serif; color: azure;">Profile Settings</h2>   
+        <p class="profileSettingText">First Name</p>
+        <input type="text" placeholder="Enter Firstname" class="nameInput" >
+
+        <p class="profileSettingText">Last Name</p>
+        <input type="text" placeholder="Enter Lastname" class="lastInput" id="profileInputBoxes">
+
+        <p class="profileSettingText">email</p>
+        <input type="text" placeholder="Enter Email" class="emailInput" id="profileInputBoxes">
+
+       
+        <div class="input-container" style="margin-top: 20px;">
+            <label for="continentInput" style="font-family: Arial, Helvetica, sans-serif; color:white;">Select Continent:</label>
+            <div class="custom-dropdown">
+                <input type="text" id="continentInput" placeholder="Select a continent" readonly>
+                <ul id="continentList" class="dropdown-list">
+                    <li>Africa</li>
+                    <li>Asia</li>
+                    <li>Europe</li>
+                    <li>North America</li>
+                    <li>Oceania</li>
+                    <li>South America</li>
+                </ul>
+            </div>
+        </div>
+
+        <button onclick="getInfo()" class="profileButtons">save</button>
+        <button onclick="clickProfile()" class="profileButtons">close</button>
+
+    </div>
+
+    <div class="startMenu">
+        <div class = "leftCol">
+            <h1 class="startTextHeading">Hello Oberoi</h1>
+
+            <div class="leftColCards" id="weatherCard">
+           <!-- <img class = "leftcolimages" src="images/firewatch-digital-2d-digital-art-photoshop-landscape-sunlight-nature-birds-trees-hills-mountains-wallpaper-thumb.jpg" alt=""> --> 
+           <p class="cardText" style="color: black;">Weather &bull; Snow &bull; 11&#xb0;C</p>
+        </div>
+
+            <div class="leftColCards" style="background-image: url(images/pexels-google-deepmind-17483867.jpg);
+            background-size: cover;
+            ">
+                <!-- <img class = "leftcolimages" src="images/firewatch-digital-2d-digital-art-photoshop-landscape-sunlight-nature-birds-trees-hills-mountains-wallpaper-thumb.jpg" alt=""> --> 
+                 <p  class="cardText" style="color: black;">Continue watching</p>
+                 </div>
+                 
+            <div class="leftColCards" style="height: 300px; background-image: url(images/map.webp);
+            background-size: cover;
+            ">
+            <!-- <img class = "leftcolimages" src="images/firewatch-digital-2d-digital-art-photoshop-landscape-sunlight-nature-birds-trees-hills-mountains-wallpaper-thumb.jpg" alt=""> --> 
+                <p  class="cardText" style="color: black;">Maps</p>
+            </div>
+          </div>
+
+
+      
+
+         <div class="rightCol">
+            <div class="news-container">
+                <div class="text-container">
+                    <div class="publisher-name">Zoo News</div>
+                    <div class="headline">Rav Singh appeals Union Court over $45bn fraud allegations</div>
+                    <div class="time">12:30 PM</div>
+                </div>
+            </div>
+
+            <div class="news-container" style="    background-image: url(images/frenzo.jpg);">
+                <div class="text-container">
+                    <div class="publisher-name">Publisher Name</div>
+                    <div class="headline">All we know about Frenzo and Rog's upcoming magnum opus</div>
+                    <div class="time">12:30 PM</div>
+                </div>
+            </div>
+
+            <div class="news-container" style="margin-bottom: 10px;background-image: url(images/okapi.jpg);">
+                <div class="text-container">
+                    <div class="publisher-name">Publisher Name</div>
+                    <div class="headline">PC convocator calls Jackifier "Scammer of the masses" and "Pig" during Moscow rally</div>
+                    <div class="time">12:30 PM</div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="pagemenu">
+        <div style="background-color:none; flex: 0.8; display: flex; flex-direction: column; margin-top: 50px; margin-left: 20px;">
+            <button class="pageButtons" onclick="clickProfile()">Profile</button>
+            <button class="pageButtons">Preferences</button>
+            <button class="pageButtons">Device</button>
+            <button class="pageButtons">App Manager</button>
+            <button class="pageButtons">More Settings</button>
+        </div>
+
+   
+        <div style="background-color: none;flex: 1; display: flex; flex-direction: column;">
+       <div class="profileinfo">
+
+        <div class="profile-container">
+            <div class="profile-pic"></div>
+            <div class="user-info">
+              <div class="username" style="font-family: Arial, Helvetica, sans-serif;">John Doe</div>
+              <div class="email" style="font-family: Arial, Helvetica, sans-serif;">john.doe@omail.com</div>
+            </div>
+          </div>
+       </div>
+
+       <div class="profile-container">
+            <div class="imageicons"> 
+                <img src="images/account icon.png" alt="" style="width: 30px;">
+                <p style="font-family: Arial, Helvetica, sans-serif;">Profile</p>
+            </div>
+            <div class="imageicons"> 
+                <img src="images/wi-fi-2119225_1280.webp" alt="" style="width: 30px;">
+                <p style="margin-bottom: 10px; font-family: Arial, Helvetica, sans-serif;">On</p>
+            </div>  <div class="imageicons"> 
+                <img src="images/battery.png" alt="" style="width: 30px;">
+                <p style="font-family: Arial, Helvetica, sans-serif;">86% </p>
+            </div>  <div class="imageicons"> 
+                <img src="images/settings.png" alt="" style="width: 30px;">
+                <p style="font-family: Arial, Helvetica, sans-serif;">Settings</p>
+            </div>  
+
+        </div>
+
+        <div class="profile-container">
+            <img src="images/cloude.png" alt="" style="width: 25px;">
+            <p style="font-family: Arial, Helvetica, sans-serif; margin-left: 10px;">My cloud &#183 21 GB left of 30 GB</p>
+        </div>
+
+        <div class="profile-container">
+            <div  style="border-radius: 0px;">
+                <img src="images/wallpaper4new.png" alt="" style="width: 100px;">
+            </div>
+            <div class="user-info" style="margin-left: 20px;">
+              <div class="username" style="font-family: Arial, Helvetica, sans-serif;">My PC</div>
+              <div class="email" style="font-family: Arial, Helvetica, sans-serif;">Light Theme</div>
+              <div style="font-family: Arial, Helvetica, sans-serif;"> Obra 9.0.0 &#183 Updated &#10003</div>
+            </div>
+          </div>
+       </div>
+      </div>
+   </div>
+      
+        </div>
+    </div>
+   
+    <div class="MediaMenu">
+        <div class="media">
+
+            <h1 style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; padding-left: 10px;">Continue watching</h1>
+
+            <div class="medias">
+                <p style="padding-left: 20px; font-family: Arial, Helvetica, sans-serif;">Fantasy - Yo Yo Audi Audi</p>
+                <img src="images/pngtree-music-player-icon-vector-png-image_6623329.png" alt="" style="width: 250px; margin-top: -80px; margin-bottom: -50px;">
+            </div>
+
+            <div class="medias" style="position: relative; height: 30%;">
+                <img src="images/thumbnail2.png" alt="" style="height: 100%; width: 100%; background-size: cover; border-radius: 10px;">
+                <p style="position: absolute; bottom: 10px; left: 15px; z-index: 999; color: white; font-size: auto; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Youtube : The structure that Dubai fears</p>
+            </div>
+
+            <div class="medias" style="position: relative; height: 30%;">
+                <img src="images/the last supper.JPEG" alt="" style="height: 100%; width: 100%; background-size: cover; border-radius: 10px;">
+                <p style="position: absolute; bottom: 10px; left: 15px;  z-index: 999; color: white; font-size: auto; font-weight: bold; font-family: Arial, Helvetica, sans-serif; mix-blend-mode: hard-light;">Your photos</p>
+            </div>
+        </div>
+
+        
+        <div class="media">
+            <h1 style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; padding-left: 10px;">Trending</h1>
+            <div class="medias" style="height: auto;">
+                <img src="images/THE FROG (3).png" alt="" style="height: 100%; width: 100%; background-size: cover; border-radius: 10px;">
+                <p style="position: absolute; bottom: 10px; left: 15px;  z-index: 999; color: white; font-size: auto; font-weight: bold; font-family: Arial, Helvetica, sans-serif; mix-blend-mode: hard-light;">Movies - The Frog and the Lizard (2024)</p>
+
+            </div>
+
+            <div class="medias" style="position: relative; height: 26%; margin-bottom: 10px;">
+                <img src="images/animals.jpg" alt="" style="height: 100%; width: 100%; background-size: cover; border-radius: 10px;">
+                <p style="position: absolute; bottom: 10px; left: 15px; z-index: 999; color: white; font-size: auto; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">AW5 - Topic</p>
+            </div>
+        </div>  
+
+
+            <div class="media" style="margin-right: 10px;">
+
+                <h1 style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; padding-left: 10px;">For you</h1>
+    
+                <div class="medias">
+
+                    <div style="display: flex; flex-direction: row;">
+                        <p style="padding-left: 20px; font-family: Arial, Helvetica, sans-serif; padding-right: 10px;">Games</p>
+                        <img src="images/obra_gaming-removebg-preview.png" alt="" style="width: 20px; height: 20px; margin: 10px; margin-top: 12px;">
+                    </div>
+
+                    <div class="approw">
+                        <img src="images/minecraft_logo_icon_168974.png" alt="" class="apps" >
+                        <img src="images/Grand-Theft-Auto-V-GTA-5-Logo.png" alt="" class="apps" >
+
+                    </div>
+                </div>
+    
+                <div class="medias">
+
+                    <div style="display: flex; flex-direction: row;">
+                        <p style="padding-left: 20px; font-family: Arial, Helvetica, sans-serif; padding-right: 10px;">Social</p>
+                    </div>
+
+                    <div class="approw">
+                        <img src="images/Instagram_icon.png" alt="" class="apps" >
+                        <img src="images/obra_mail-removebg-preview.png" alt="" class="apps" style="margin-left: 25px;">
+
+                    </div>
+                </div>
+                <div class="medias" style="position: relative; height: 30%;">
+                    <img src="images/hoppydark2.jpg" alt="" style="height: 100%; width: 100%; background-size: cover; border-radius: 10px;">
+                    <p style="position: absolute; bottom: 10px; left: 15px;  z-index: 999; color: white; font-size: auto; font-weight: bold; font-family: Arial, Helvetica, sans-serif; mix-blend-mode: hard-light;">Movies - Hoppy</p>
+                </div>
+            </div>
+    </div>
+
+    <div class="menuMenu">
+        <input type="text" class="searchApps" placeholder="Search Apps">
+        <p class="labelText">Pinned</p>
+        <div class="approw">
+            <a href="" class="appbox">
+                <img src="images/obra_mail-removebg-preview.png" alt="" class="apps">
+            </a>
+
+                <a href="" class="appbox">
+                <img src="images/browser-removebg-preview.png" alt="" class="apps">
+            </a>
+            
+            <a href="" class="appbox">
+                <img src="images/obra_drop-removebg-preview.png" alt="" class="apps">
+            </a>
+            <a href="" class="appbox">
+                <img src="images/obra_files-removebg-preview.png" alt="" class="apps">
+            </a>
+             <a href="" class="appbox">
+                <img src="images/obra_office-removebg-preview.png" alt="" class="apps">
+            </a>
+
+        </a>
+        <a href="" class="appbox">
+            <img src="images/asphalt_9__legends___dock_icon_by_thecheshireguy_ddwr1dm-fullview.png" alt="" class="apps">
+        </a>
+         <a href="" class="appbox">
+            <img src="images/Blender_logo_no_text.svg.png" alt="" class="apps">
+        </a>
+
+        </div>
+        <div class="approw">
+            <a href="" class="appbox">
+                <img src="images/minecraft_logo_icon_168974.png" alt="" class="apps">
+            </a>
+
+                <a href="" class="appbox">
+                <img src="images/Instagram_icon.png" alt="" class="apps">
+            </a>
+            
+            <a href="" class="appbox">
+                <img src="images/Spotify_icon.svg.webp" alt="" class="apps">
+            </a>
+            <a href="" class="appbox">
+                <img src="images/Settings_(iOS).png" alt="" class="apps">
+            </a>
+             <a href="" class="appbox">
+                <img src="images/obra_ai-removebg-preview.png" alt="" class="apps">
+            </a>
+
+        </a>
+     
+         <a href="" class="appbox">
+            <img src="images/icon-for-iphone-app-10.jpg" alt="" class="apps">
+        </a>
+
+     
+        </div>
+        <p class="labelText">Recent</p>
+        <div class="approw">
+            <a href="" class="appbox">
+                <img src="images/moshee-removebg-preview (1).png" alt="" class="apps" style="margin-left: -10px;">
+            </a>
+
+                <a href="" class="appbox">
+                <img src="images/calendar.png" alt="" class="apps">
+            </a>
+
+            <a href="" class="appbox">
+                <img src="images/browser-removebg-preview.png" alt="" class="apps">
+            </a>
+            
+            <a href="" class="appbox">
+                <img src="images/obra_mail-removebg-preview.png" alt="" class="apps">
+            </a>
+            <a href="" class="appbox">
+                <img src="images/obra_files-removebg-preview.png" alt="" class="apps">
+            </a>
+             <a href="" class="appbox">
+                <img src="images/obra_office-removebg-preview.png" alt="" class="apps">
+            </a>
+
+        </div>
+        <p class="labelText">Tools</p>
+        <div class="approw">
+            <a href="" class="appbox">
+                <img src="images/obra_drop-removebg-preview.png" alt="" class="apps">
+            </a>
+
+                <a href="" class="appbox">
+                <img src="images/obra_office-removebg-preview.png" alt="" class="apps">
+            </a>
+            
+            <a href="" class="appbox">
+                <img src="images/obra_files-removebg-preview.png" alt="" class="apps">
+            </a>
+            <a href="" class="appbox">
+                <img src="images/obra_gaming-removebg-preview.png" alt="" class="apps">
+            </a>
+             <a href="" class="appbox">
+                <img src="images/obra_ai-removebg-preview.png" alt="" class="apps">
+            </a>
+
+        </div>
+    </div>
+
+    <div class="themes">
+        
+    </div>
+
+    <div class="sidebar">
+        <button class="sidebuttons"><img class = "imageicons" src="images/Instagram_icon.png" alt=""></button>
+        <button class="sidebuttons"><img class = "imageicons" src="images/obra_files-removebg-preview.png" alt=""></button>
+        <button class="sidebuttons"><img class = "imageicons" src="images/Spotify_icon.svg.webp" alt=""></button>
+        <button class="sidebuttons"><img class = "imageicons" src="images/minecraft_logo_icon_168974.png" alt=""></button>
+        <button class="sidebuttons"><img class = "imageicons" src="images/obra_mail-removebg-preview.png" alt=""></button>
+        <button class="sidebuttons"><img class = "imageicons" src="images/obra_drop-removebg-preview.png" alt=""></button>
+        <button class="sidebuttons"><img class = "imageicons" src="images/browser-removebg-preview.png" alt=""></button>
+
+    </div>
+
+   
+
+    <div class="circle">
+        <img src="images/wheel-removebg-preview.png" alt="" class="wheelIcons">
+    </div>
+
+
+    
+
+
+    
+    <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/72879ca2-3154-4212-a066-55ea36c78536/webchat/config.js" defer></script>
+
+    <script src="obra.js"></script>
+</body>
+</html>
+    
